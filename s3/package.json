@@ -1,0 +1,14 @@
+{
+  "name": "s3-create-bucket",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "ThomRick",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.342.0"
+  }
+}

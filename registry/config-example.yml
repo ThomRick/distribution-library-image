@@ -3,12 +3,26 @@ log:
   fields:
     service: registry
 storage:
-  cache:
-    blobdescriptor: inmemory
-  filesystem:
-    rootdirectory: /var/lib/registry
+  # cache:
+  #   blobdescriptor: inmemory
+  # filesystem:
+  #   rootdirectory: /var/lib/registry
+  s3:
+    accesskey: accessKey1
+    secretkey: verySecretKey1
+    region: us-west-1
+    regionendpoint: http://localhost:5000
+    bucket: images
+    # encrypt: false
+    # keyid: mykeyid
+    # secure: false
+    # v4auth: false
+    chunksize: 5242880
+    multipartcopychunksize: 33554432
+    multipartcopymaxconcurrency: 100
+    multipartcopythresholdsize: 33554432
+    # rootdirectory: '.'
 http:
-  addr: :5000
   headers:
     X-Content-Type-Options: [nosniff]
 health:

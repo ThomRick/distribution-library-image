@@ -1,0 +1,9 @@
+version: "3"
+services:
+  s3:
+    image: localstack/localstack:0.8.7
+    environment:
+      - SERVICES=s3:5000
+    ports:
+      - "8081:8080"
+      - "5000:5000"
